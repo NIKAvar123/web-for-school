@@ -1,0 +1,110 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+
+  background-color: cornflowerblue;
+  border-radius: 20px;
+
+  
+  flex-wrap: wrap;
+  width: 95%;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.primary:hover,
+.secondary:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 400px) {
+  main {
+    flex-direction: row; /* <-- ეს შეიცვალა */
+    flex-wrap: wrap;     /* რომ არ გადაიჭრას */
+    justify-content: center;
+    gap: 10px;
+    border-radius: 12px;
+  }
+
+  .btn,
+  .btn_secondary {
+    width: auto;         /* აღარ აიძულებს 50% სიგანეს */
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+footer{
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+
+.btn_secondary{
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  font-style: none;
+
+}
+
+
+
+.btn_primary {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  font-style: none;
+}
+
+
+@media (max-width: 400px) {
+  main {
+    flex-wrap: nowrap;
+    overflow-x: auto; /* პატარა ეკრანზე სქროლიც რომ იყოს */
+  }
+}
+
+.btn,
+.btn_secondary {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  width: 160px;   /* 👈 ყველა ღილაკი ერთ ზომაზე */
+  text-align: center;
+}
+
+
+@media (max-width: 400px) {
+  .btn,
+  .btn_secondary {
+    width: 140px;  /* ცოტა პატარა მაგრამ მაინც ერთნაირი */
+    font-size: 14px;
+  }
+}
+

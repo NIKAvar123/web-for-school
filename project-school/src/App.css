@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  background-color: #266cd4;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.slides-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.slide-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
