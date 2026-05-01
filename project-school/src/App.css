@@ -27,3 +27,26 @@ body {
   display: block;
   border-radius: 8px;
 }
+
+.slide-link {
+  display: block;
+  text-align: center;
+  padding: 12px 0;
+  background-color: #fff;
+  color: #266cd4;
+  font-weight: bold;
+  text-decoration: none;
+  border-top: 1px solid #eee;
+}
+@media (max-width: 768px) {
+  .slide {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+.title,
+.subtitle {
+  display: block;
+  text-align: center;
+  margin: 0;
+}

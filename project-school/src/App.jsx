@@ -1,35 +1,41 @@
-import './App.css';
-import img1 from './assets/img1.png';
-import img2 from './assets/img2.png';
-import img3 from './assets/img3.png';
-import img4 from './assets/img4.png';
-import img5 from './assets/img5.png';
-import img6 from './assets/img6.png';
-import img7 from './assets/img7.png';
-import img8 from './assets/img8.png';
-import img9 from './assets/img9.png';
-import img10 from './assets/img10.png';
-
+import "./App.css";
+import img1 from "./assets/gulua.png";
+import img2 from "./assets/imglemonjava.png";
+import img3 from "./assets/bendeliani.png";
+import img4 from "./assets/chkadua.png";
+import img5 from "./assets/deforrestation.png";
+import img6 from "./assets/image.png";
 
 const slides = [
-  { id: 1, src: img1, alt: 'Title Slide' },
-  { id: 2, src: img2, alt: 'Key Points' },
-  { id: 3, src: img3, alt: 'Introduction' },
-  { id: 4, src: img4, alt: 'Main Sources of Pollution' },
-  { id: 5, src: img5, alt: 'Effect of Fertilizers' },
-  { id: 6, src: img6, alt: 'Plastic Pollution' },
-  { id: 7, src: img7, alt: 'Impact on Biodiversity' },
-  { id: 8, src: img8, alt: 'Effects on Marine Life' },
-  { id: 9, src: img9, alt: 'Aquatic Plants & Oxygen' },
-  { id: 10, src: img10, alt: 'Conclusion' },
+  { id: 1, src: img1, alt: "Title Slide", file: "./public/ppts/Presentation 5.pdf" },
+  { id: 2, src: img2, alt: "Key Points", file: "./public/ppts/წყლის დაბინძურება 2.pdf" },
+  { id: 3, src: img3, alt: "Introduction", file: "./public/ppts/ნავთობი ენერგო რესურსები 2.pdf" },
+  { id: 4, src: img4, alt: "Main Sources of Pollution", file: "/ppts/ექსტრემალური კლიმატი 2.pdf" },
+  { id: 5, src: img5, alt: "Effect of Fertilizers", file: "/ppts/Deforrestation 2.pdf" },
+  { id: 6, src: img6, alt: "Effect of Fertilizers", file: "/ppts/Presentation1.pdf" },
 ];
 
-function App() { 
+function App() {
+  const handleDownload = (file) => {
+    const link = document.createElement("a");
+    link.href = file;
+    link.download = file.split("/").pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="slides-container">
-      {slides.map(slide => (
+      {slides.map((slide) => (
         <div key={slide.id} className="slide">
-          <img src={slide.src} alt={slide.alt} className="slide-img" />
+          <img
+            src={slide.src}
+            alt={slide.alt}
+            className="slide-img"
+            onClick={() => handleDownload(slide.file)}
+            style={{ cursor: "pointer" }}
+          />
         </div>
       ))}
     </div>
